@@ -23,10 +23,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun rollDice() {
-        val resultText = findViewById<TextView>(R.id.result_text)
+        val resultText: TextView = findViewById(R.id.result_text)
         val randomInt =  Random.nextInt(6) + 1
         resultText.text = "R O L L E D  $randomInt"
-        val diceImage = findViewById<ImageView>(R.id.dice_image)
+        val diceImage : ImageView = findViewById(R.id.dice_image)
         val drawableResource = when (randomInt) {
             1 -> R.drawable.dice_1
             2 -> R.drawable.dice_2
