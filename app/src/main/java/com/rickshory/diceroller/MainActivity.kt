@@ -27,6 +27,14 @@ class MainActivity : AppCompatActivity() {
         val randomInt =  Random.nextInt(6) + 1
         resultText.text = "R O L L E D  $randomInt"
         val diceImage = findViewById<ImageView>(R.id.dice_image)
-        
+        val drawableResource = when (randomInt) {
+            1 -> R.drawable.dice_1
+            2 -> R.drawable.dice_2
+            3 -> R.drawable.dice_3
+            4 -> R.drawable.dice_4
+            5 -> R.drawable.dice_5
+            6 -> R.drawable.dice_5
+            else -> R.drawable.empty_dice
+        }
     }
 }
