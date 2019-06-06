@@ -16,15 +16,14 @@ class MainActivity : AppCompatActivity() {
 //        rollButton.text = "Let's Roll"
 
         rollButton.setOnClickListener {
-            Toast.makeText(this, "button clicked", Toast.LENGTH_SHORT).show()
+//            Toast.makeText(this, "button clicked", Toast.LENGTH_SHORT).show()
             rollDice()
         }
     }
 
     private fun rollDice() {
         val resultText = findViewById<TextView>(R.id.result_text)
-//        val randomInt = Random().nextInt(6) + 1
-//        resultText.text = randomInt.toString()
-        resultText.text = "R O L L E D"
+        val randomInt =  Random.nextInt(6) + 1
+        resultText.text = "R O L L E D  $randomInt"
     }
 }
