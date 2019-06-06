@@ -17,6 +17,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val rollButton: Button = findViewById(R.id.roll_button)
 //        rollButton.text = "Let's Roll"
+        resultText = findViewById(R.id.result_text)
+        diceImage = findViewById(R.id.dice_image)
 
         rollButton.setOnClickListener {
 //            Toast.makeText(this, "button clicked", Toast.LENGTH_SHORT).show()
@@ -25,10 +27,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun rollDice() {
-        val resultText: TextView = findViewById(R.id.result_text)
         val randomInt =  Random.nextInt(6) + 1
         resultText.text = "R O L L E D  $randomInt"
-        val diceImage : ImageView = findViewById(R.id.dice_image)
         val drawableResource = when (randomInt) {
             1 -> R.drawable.dice_1
             2 -> R.drawable.dice_2
