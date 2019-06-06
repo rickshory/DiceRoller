@@ -3,6 +3,7 @@ package com.rickshory.diceroller
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import kotlin.random.Random
@@ -25,5 +26,7 @@ class MainActivity : AppCompatActivity() {
         val resultText = findViewById<TextView>(R.id.result_text)
         val randomInt =  Random.nextInt(6) + 1
         resultText.text = "R O L L E D  $randomInt"
+        val diceImage = findViewById<ImageView>(R.id.dice_image)
+        
     }
 }
