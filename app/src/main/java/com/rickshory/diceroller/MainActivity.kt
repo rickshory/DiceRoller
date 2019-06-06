@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val rollButton: Button = findViewById(R.id.roll_button)
 //        rollButton.text = "Let's Roll"
-        val resultText = findViewById<TextView>(R.id.result_text)
+
         rollButton.setOnClickListener {
             Toast.makeText(this, "button clicked", Toast.LENGTH_SHORT).show()
             rollDice()
@@ -21,6 +21,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun rollDice() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        val resultText = findViewById<TextView>(R.id.result_text)
     }
 }
